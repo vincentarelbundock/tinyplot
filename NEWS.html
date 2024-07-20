@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tinyplot</title>
+<title>news – tinyplot</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -128,17 +128,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./NEWS.html">News</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -169,9 +169,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Reference</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -180,6 +180,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./man/draw_legend.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">draw_legend</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./man/get_saved_par.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">get_saved_par</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -204,6 +210,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./LICENSE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">License</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./CITATION.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Citation</span></a>
   </div>
@@ -220,12 +232,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#news" id="toc-news" class="nav-link active" data-scroll-target="#news">News</a>
   <ul class="collapse">
-  <li><a href="#development-version" id="toc-development-version" class="nav-link" data-scroll-target="#development-version">0.0.5.9003 (development version)</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">0.0.5</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0.0.4</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">0.0.3</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">0.0.2</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">0.0.1</a></li>
+  <li><a href="#dev-version" id="toc-dev-version" class="nav-link" data-scroll-target="#dev-version">0.1.0.99 (dev version)</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">0.1.0</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0.0.5</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">0.0.4</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">0.0.3</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">0.0.2</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">0.0.1</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -238,26 +251,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="news" class="level1">
 <h1>News</h1>
-<section id="development-version" class="level2">
-<h2 class="anchored" data-anchor-id="development-version">0.0.5.9003 (development version)</h2>
+<p><em>If you are viewing this file on CRAN, please check the <a href="https://grantmcdermott.com/tinyplot/NEWS.html">latest NEWS</a> on our website where the formatting is also better.</em></p>
+<section id="dev-version" class="level2">
+<h2 class="anchored" data-anchor-id="dev-version">0.1.0.99 (dev version)</h2>
+<p>New features:</p>
+<ul>
+<li>Support for additional plot types:
+<ul>
+<li><code>type = "n"</code>, i.e.&nbsp;empty plot. Since <code>type = "n"</code> implicitly assumes points, which limits the type of legend that can be drawn alongside the empty plot, we have also added a companion <code>empty</code> argument that can be used alongside any plot type. (<a href="https://github.com/grantmcdermott/tinyplot/issues/157">#157</a>, <a href="https://github.com/grantmcdermott/tinyplot/issues/167">#167</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li><code>type = "boxplot"</code>. Simultaneously enables <code>plt(numeric ~ factor)</code> support, first raised in <a href="https://github.com/grantmcdermott/tinyplot/issues/2">#2</a>, so that a boxplot is automatically plotted if a numeric is plotted against a factor. (<a href="https://github.com/grantmcdermott/tinyplot/issues/154">#154</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li><code>type = "polypath</code>. (<a href="https://github.com/grantmcdermott/tinyplot/issues/159">#159</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li><code>type = "rect"</code>. (<a href="https://github.com/grantmcdermott/tinyplot/issues/161">#161</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li><code>type = "segments"</code>. (<a href="https://github.com/grantmcdermott/tinyplot/issues/163">#163</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li><code>type = "histogram"</code> (alias <code>type = "hist"</code>). (<a href="https://github.com/grantmcdermott/tinyplot/issues/164">#164</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+</ul></li>
+</ul>
+<p>Misc:</p>
+<ul>
+<li>Various documentation improvements.</li>
+</ul>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">0.1.0</h2>
+<p>Our first CRAN submission! This v0.1.0 release includes the following new features and updates:</p>
+<p>License:</p>
+<ul>
+<li>Formally switch to Apache 2.0 license. (<a href="https://github.com/grantmcdermott/tinyplot/issues/141">#141</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+</ul>
+<p>Breaking changes:</p>
+<ul>
+<li>To ensure consistent “dot.case” style for all <code>tinyplot()</code> function arguments, the following two arguments have been renamed (<code>old</code> =&gt; <code>new</code>):
+<ul>
+<li><code>par_restore</code> =&gt; <code>restore.par</code> (note the change in word order too!)</li>
+<li><code>ribbon_alpha</code> =&gt; <code>ribbon.alpha</code></li>
+</ul>
+We don’t believe that these two arguments are much used in practice. So hopefully it will only have a negligible effect on existing <code>tinyplot</code> code in the wild, even though it is a breaking change. (<a href="https://github.com/grantmcdermott/tinyplot/issues/149">#149</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+</ul>
 <p>New features:</p>
 <ul>
 <li>Gradient legends are now supported if a continuous variable is passed to <code>by</code>. Thanks to <a href="https://github.com/zeileis"><span class="citation" data-cites="zeileis">@zeileis</span></a> for detailed feedback and advice around the default palette choice (a restricted version of the “viridis” palette), as well as StackOverflow user mnel, whose answer <a href="https://stackoverflow.com/a/13355440">here</a> provided the inspiration for the final implementation. (<a href="https://github.com/grantmcdermott/tinyplot/issues/122">#122</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
 <li>Ordered factors now inherit a discrete sequential color palette (“viridis”) by default. Thanks to <a href="https://github.com/zeileis"><span class="citation" data-cites="zeileis">@zeileis</span></a> for the suggestion. (<a href="https://github.com/grantmcdermott/tinyplot/issues/130">#130</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
 <li>Support user-supplied polygons. (<a href="https://github.com/grantmcdermott/tinyplot/issues/127">#127</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
 <li>Support for the <code>lwd</code> argument for adjusting line widths. Similar to <code>pch</code>, <code>lty</code>, etc. this arguments also accepts a “by” convenience keyword to automatically vary line widths by group. (<a href="https://github.com/grantmcdermott/tinyplot/issues/134">#134</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li><code>tpar()</code> now accepts standard <code>par()</code> arguments in addition to the <code>tinyplot</code>-specific ones. This allows users to set or query graphical parameters via a single convenience function, instead having to invoke <code>tpar</code> and <code>par</code> separately. (<a href="https://github.com/grantmcdermott/tinyplot/issues/140">#140</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)
+<ul>
+<li>As an aside, <code>tpar()</code> has gained some additional parameters for fine-grained control of global plot defaults, including <code>grid</code>, <code>ribbon.alpha</code>, and various <code>file.*</code> parameters (see next bullet point).</li>
+</ul></li>
+<li>Users can write plots directly to disk using the new <code>file</code> argument, alongside corresponding <code>width</code> and <code>height</code> arguments for output customization (both of which are defined in inches). For example, <code>tinyplot(..., file = "~/myplot.png", width = 8, height = 5)</code>. This implementation relies on a simple internal wrapper around the traditional R external graphics devices like <code>png()</code>, <code>pdf()</code>, etc. But it may prove more convenient, since the current global graphics parameters held in <code>(t)par()</code> are carried over to the external device too and don’t need to be reset. Note that the appropriate device type is determined automatically by the file extension, which must be one of “.png”, “.jpg” (“.jpeg”), “.pdf”, or “.svg”. (<a href="https://github.com/grantmcdermott/tinyplot/issues/143">#143</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li>We have a shiny new <code>tinyplot</code> logo. (<a href="https://github.com/grantmcdermott/tinyplot/issues/148">#148</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li>The new <code>get_saved_par()</code> function can be used to retrieve the <code>par</code> settings from immediately before or immediately after the preceding <code>tinyplot</code> call. This function replaces some older (non-exported) internal functions that <code>tinyplot</code> was using to restore and control <code>par</code> environments. But it could also prove help to end users who are looking for additional ways to restore <code>par</code> settings after the fact. See <code>?get_saved_par</code> for some examples. (<a href="https://github.com/grantmcdermott/tinyplot/issues/152">#152</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li><code>tinyplot</code>/<code>plt</code> gaina a new <code>alpha = &lt;numeric[0,1]&gt;</code> convenience argument for adding transparency to plot elements and colours. Example use: <code>plt(rnorm(1e3), pch = 19, alpha = 0.3)</code>. (<a href="https://github.com/grantmcdermott/tinyplot/issues/129">#129</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li>Similar to the preceding news item, transparency can be added to (grouped) background fill by passing <code>bg</code> (or its alias, <code>fill</code>) a numeric in the range <code>[0,1]</code>. This feature has the same effect as <code>bg = "by"</code> except for the added transparency. Example use: <code>plt(lat ~ long | depth, data = quakes, pch = 21, cex = 2, bg = 0.2)</code>. (<a href="https://github.com/grantmcdermott/tinyplot/issues/129">#129</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
 </ul>
 <p>Bug fixes:</p>
 <ul>
 <li>Fixed bug that prevented <code>tpar(facet.x = ...)</code> args from being passed forward and set correctly. (<a href="https://github.com/grantmcdermott/tinyplot/issues/137">#137</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li>Fixed bug where custom legends weren’t working with <code>type = "density"</code>. (<a href="https://github.com/grantmcdermott/tinyplot/issues/147">#147</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
 </ul>
 <p>Internals:</p>
 <ul>
 <li>We no longer ship the vignette(s) with the built package. This helps to reduce the size of the installation tarball and also avoids some redundancy with the actual help documentation (since many of the examples are the same). Note that the vignettes are all still rendered and available online at the <code>tinyplot</code> <a href="https://grantmcdermott.com/tinyplot/">website</a>. (<a href="https://github.com/grantmcdermott/tinyplot/issues/135">#135</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li>Similarly, we anticipate skipping tests on CRAN since the large suite of test snapshots (images) held in <code>inst/tinytest</code> is pushing the install tarball over CRAN’s recommended 5 MB limit. Please note that local testing of the package requires adding the <code>NOT_CRAN=TRUE</code> environment variable to your .Renviron file (or, exporting it in your .bashrc/.zshrc/etc. dotfile if you prefer that approach). (<a href="https://github.com/grantmcdermott/tinyplot/issues/145">#145</a> <a href="https://github.com/vincentarelbundock"><span class="citation" data-cites="vincentarelbundock">@vincentarelbundock</span></a> &amp; <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li>Update some test snapshots to match slight changes in the way that R 4.4.0 calculates <code>density</code> grid coords. (<a href="https://github.com/grantmcdermott/tinyplot/issues/150">#150</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
 </ul>
 </section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">0.0.5</h2>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">0.0.5</h2>
 <p><strong>IMPORTANT BREAKING CHANGE:</strong></p>
 <p>The package has been renamed to <strong>tinyplot</strong>. (<a href="https://github.com/grantmcdermott/tinyplot/issues/22">#22</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</p>
 <p>This package renaming also incorporates the following function changes:</p>
@@ -283,8 +342,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Many thanks to everyone who provided thoughtful feedback about this prospective name change, especially <a href="https://github.com/zeileis"><span class="citation" data-cites="zeileis">@zeileis</span></a> and <a href="https://github.com/vincentarelbundock"><span class="citation" data-cites="vincentarelbundock">@vincentarelbundock</span></a> for kicking off the discussion, as well as the 100+ participants who voted in the social media poll.</p>
 <p>For more details about the rational underlying this renaming decision, please see the following GitHub comment, as well as the discussion that preceded it: https://github.com/grantmcdermott/plot2/issues/22#issuecomment-1928472754</p>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">0.0.4</h2>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">0.0.4</h2>
 <p>Website:</p>
 <p>We now have a dedicated website! (<a href="https://github.com/grantmcdermott/tinyplot/issues/80">#80</a> <a href="https://github.com/vincentarelbundock"><span class="citation" data-cites="vincentarelbundock">@vincentarelbundock</span></a>)</p>
 <p>New features:</p>
@@ -309,8 +368,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Fix bug where grid wasn’t auto-expanding correctly for area plots. (<a href="https://github.com/grantmcdermott/tinyplot/issues/92">#92</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
 </ul>
 </section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">0.0.3</h2>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3">0.0.3</h2>
 <p>Breaking changes:</p>
 <ul>
 <li>Colour palettes are now controlled via a single <code>palette</code> argument that unifies the old <code>palette</code> and (deprecated) <code>palette.args</code> arguments. In addition, the default palette for small groups has been changed from “Okabe-Ito” to “R4”. (<a href="https://github.com/grantmcdermott/tinyplot/issues/31">#31</a> and <a href="https://github.com/grantmcdermott/tinyplot/issues/32">#32</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
@@ -333,8 +392,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Setting a global palette, e.g.&nbsp;<code>palette("ggplot2")</code> is now respected. (<a href="https://github.com/grantmcdermott/tinyplot/issues/44">#44</a> <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
 </ul>
 </section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3">0.0.2</h2>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4">0.0.2</h2>
 <p>Breaking changes:</p>
 <ul>
 <li>Legend defaults have been changed. The default position is now “right!” and drawn without a border, i.e.&nbsp;bty = “n” (<a href="https://github.com/grantmcdermott/tinyplot/issues/14">#14</a> by <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>).</li>
@@ -357,8 +416,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://github.com/vincentarelbundock"><span class="citation" data-cites="vincentarelbundock">@vincentarelbundock</span></a> and <a href="https://github.com/zeileis"><span class="citation" data-cites="zeileis">@zeileis</span></a> have joined the project as core contributors. 🎉</li>
 </ul>
 </section>
-<section id="section-4" class="level2">
-<h2 class="anchored" data-anchor-id="section-4">0.0.1</h2>
+<section id="section-5" class="level2">
+<h2 class="anchored" data-anchor-id="section-5">0.0.1</h2>
 <ul>
 <li>Initial release on GitHub.</li>
 </ul>
@@ -403,18 +462,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -446,7 +494,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -454,7 +524,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
