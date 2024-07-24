@@ -47,6 +47,12 @@ f = function() {
 }
 expect_snapshot_plot(f, label = "boxplot_groups_argpass")
 
+# don't dodge if by (groups) and x are the same
+f = function() {
+  plt(Sepal.Length ~ Species | Species, iris, type = "boxplot")
+}
+expect_snapshot_plot(f, label = "boxplot_groups_x_same")
+
 #
 ## facets
 
@@ -64,6 +70,6 @@ expect_snapshot_plot(f, label = "boxplot_groups_facets_with_missings")
 ## numeric ~ factor should auto-coerce to boxplot type
 
 f = function() {
-  plt(mpg ~ factor(am), data = mtcars)
+  suppressWarnings(plt(mpg ~ factor(am), data = mtcars))
 }
 expect_snapshot_plot(f, label = "boxplot_auto_factor")
