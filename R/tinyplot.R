@@ -620,6 +620,52 @@ tinyplot.default = function(
   if (is.null(xlab)) xlab = x_dep
   if (is.null(ylab)) ylab = y_dep
 
+  # jitter before splitting
+  if (type == "jitter") {
+    if (is.character(x)) x = as.factor(x)
+    if (is.character(y)) y = as.factor(y)
+    if (is.factor(x)) {
+      xlvls = levels(x)
+      xlabs = seq_along(xlvls)
+      names(xlabs) = xlvls
+      x = as.integer(x)
+    } else {
+      xlabs = NULL
+    }
+    if (is.factor(y)) {
+      ylvls = levels(y)
+      ylabs = seq_along(ylvls)
+      names(ylabs) = ylvls
+      y = as.integer(y)
+    } else {
+      ylabs = NULL
+    }
+    x = jitter(x)
+    y = jitter(y)
+    type = "p"
+  }
+
+
+  full_data = list(x = x, y = y, xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax)
+  full_data = Filter(function(z) length(z) > 0, full_data)
+  full_data = data.frame(full_data)
+  full_data[["rowid"]] = seq_len(nrow(full_data))
+  full_data[["facet"]] = if (!is.null(facet)) facet else ""
+  full_data[["by"]] = if (!is.null(by)) by else ""
+
+  # split on `facet`
+  facet_data = split(full_data, full_data$facet)
+
+  # split on `by`
+  by_data = split(full_data, full_data$by)
+
+  # histogram breaks are calculated on per-facet basis
+  if (identical(type, "histogram")) {
+    breaks = if ("breaks" %in% names(dots)) dots[["breaks"]] else "Sturges"
+    breaks = lapply(facet_data, function(z) {
+      hist(z$x, plot = FALSE, breaks = breaks)$breaks
+    })
+  }
 
   # type-specific settings and arguments
   if (type == "density") {
@@ -644,29 +690,6 @@ tinyplot.default = function(
     was_area_type = FALSE # flag to keep track for some legend adjustments below
   }
 
-  if (type == "jitter") {
-    if (is.character(x)) x = as.factor(x)
-    if (is.character(y)) y = as.factor(y)
-    if (is.factor(x)) {
-      xlvls = levels(x)
-      xlabs = seq_along(xlvls)
-      names(xlabs) = xlvls
-      x = as.integer(x)
-    } else {
-      xlabs = NULL
-    }
-    if (is.factor(y)) {
-      ylvls = levels(y)
-      ylabs = seq_along(ylvls)
-      names(ylabs) = ylvls
-      y = as.integer(y)
-    } else {
-      ylabs = NULL
-    }
-    x = jitter(x)
-    y = jitter(y)
-    type = "p"
-  }
 
   if (type == "boxplot") x = as.factor(x)
   if (type %in% c("pointrange", "errorbar", "ribbon", "boxplot")) {
@@ -1251,6 +1274,12 @@ tinyplot.default = function(
   #  2) Inner loop over facets
 
   ## Outer loop over the "by" groups
+
+  # TODO: split_data = by_data
+  if (type %in% c("point", "p")) {
+    split_data = lapply(by_data, as.list) # more flexible length for palettes
+  }
+
   for (i in seq_along(split_data)) {
     # Split group-level data again to grab any facets
     idata = split_data[[i]]
