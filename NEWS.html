@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,10 +69,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-41ce87c438ccaeb35f64ae41c48547a8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -337,6 +337,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./man/type_ridge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">type_ridge</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./man/type_spineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_spineplot</span></a>
   </div>
@@ -484,7 +490,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -494,23 +500,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><em>If you are viewing this file on CRAN, please check the <a href="https://grantmcdermott.com/tinyplot/NEWS.html">latest NEWS</a> on our website where the formatting is also better.</em></p>
 <section id="dev-version" class="level2">
 <h2 class="anchored" data-anchor-id="dev-version">0.2.1.99 (dev version)</h2>
-<p>Breaking changes:</p>
+<p>New plot <code>type</code> processing and some breaking changes:</p>
 <ul>
-<li>As part of our new plot <code>type</code> logic (see below), character-based shortcuts like <code>type = "p"</code>, <code>type = "hist"</code>, etc. are reserved for default behaviour. In turn, this means that any type-specific arguments for customizing behaviour should no longer be passed through the main <code>tinyplot(...)</code> function (i.e., via <code>...</code>), since they will be ignored. Rather, these ancilliary arguments must now be passed explicitly as part of the corresponding <code>type_*()</code> function to the <code>type</code> argument. For example, say that you want to change the default number of breaks in a histogram plot. Whereas previously you could have called, say, <code>tinyplot(Nile, type = "hist", breaks = 30)</code>, now you should instead call <code>tinyplot(Nile, type = type_hist(breaks = 30))</code>. We’re sorry for introducing a breaking change, but again this should only impact plots that deviate from the default behaviour. Taking a longer-term view, this new <code>type</code> logic ensures that users can better control how their plots behave, avoids guesswork on our side, and should help to reduce the overall maintenance burden of the package.</li>
-<li><code>ribbon.alpha</code> is deprecated in <code>tinyplot()</code>. Use the <code>alpha</code> argument of the <code>type_ribbon()</code> function instead: <code>tinyplot(..., type = type_ribbon(alpha = 0.5))</code></li>
-</ul>
-<p>New plot <code>type</code> logic and functional equivalents:</p>
-<ul>
-<li>Alongside the standard character shortcuts (<code>"p"</code>, <code>"l"</code>, etc.), the <code>type</code> argument now accepts functional <code>type_*()</code> equivalents (<code>type_points()</code>, <code>type_lines()</code>, etc.). These functional plot types enable a variety of additional features, as well as a more disciplined approach to explicit argument passing for customized type behaviour. (<a href="https://github.com/grantmcdermott/tinyplot/issues/222">#222</a> <a href="https://github.com/vincentarelbundock"><span class="citation" data-cites="vincentarelbundock">@vincentarelbundock</span></a>)</li>
-<li>Users can define their own custom types by creating <code>type_&lt;typename&gt;()</code> functions.</li>
+<li>In previous versions of <code>tinyplot</code> the plot <code>type</code> was specified by character arguments, i.e., either the standard character shortcuts (such <code>"p"</code>, <code>"l"</code>, etc.) or labels (such as <code>"hist"</code>, <code>"boxplot"</code>, etc.). In addition, the <code>type</code> argument now accepts functional <code>type_*()</code> equivalents (e.g., <code>type_hist()</code>) which enable a variety of additional features, as well as a more disciplined approach to explicit argument passing for customized type behavior. (<a href="https://github.com/grantmcdermott/tinyplot/issues/222">#222</a> <a href="https://github.com/vincentarelbundock"><span class="citation" data-cites="vincentarelbundock">@vincentarelbundock</span></a>)</li>
+<li>All plot types provided in the package can be specified either by a character label or the corresponding function. Thus, the following two are equivalent: <code>tinyplot(Nile, type = "hist")</code> and <code>tinyplot(Nile, type = type_hist())</code>.</li>
+<li>The main advantage of the function specification is that many more plot types can be supported (see list below) and users can define their own custom types by creating <code>type_&lt;typename&gt;()</code> functions.</li>
+<li>Enabling these new features comes at the cost of a different approach for specifying ancilliary arguments of the type function. It is recommended to pass such arguments explicitly to the <code>type_*()</code> function call, e.g., as in <code>tinyplot(Nile, type = type_hist(breaks = 30))</code>. In many situations it is still possible to use the character specification plus extra arguments instead, e.g., as in <code>tinyplot(Nile, type = "hist", breaks = 30)</code>. However, this only works if the ancilliary type arguments do not match or even partially match any of the arguments of the <code>tinyplot()</code> function itself. This is why the former approach is recommended (unless using only the default type).</li>
+<li>Due to this change in the processing of the ancilliary type arguments there are a few breaking changes but we have tried to minimize them. One argument that was deprecated explicitly is <code>ribbon.alpha</code> in <code>tinyplot()</code>. Use the <code>alpha</code> argument of the <code>type_ribbon()</code> function instead: <code>tinyplot(..., type = type_ribbon(alpha = 0.5))</code>. Note that it is not equivalent to use <code>tinyplot(..., type = "ribbon", alpha = 0.5)</code> because the latter matches the <code>alpha</code> argument of <code>tinyplot()</code> (rather than of <code>type_ribbon()</code>) and modifies the <code>palette</code> rather than the ribbon only.</li>
 <li>More details are provided in the dedicated <a href="https://grantmcdermott.com/tinyplot/vignettes/types.html">Plot types vignette</a> on the website.</li>
 </ul>
 <p>New plot types:</p>
 <ul>
 <li>Visualizations:
 <ul>
-<li><code>type_spineplot()</code> (shortcut: <code>"spineplot"</code>) type for producing spine plots and spinograms. These are modified versions of a histogram or mosaic plot, and are particularly useful for visualizing factor variables. (<a href="https://github.com/grantmcdermott/tinyplot/issues/233">#233</a> <a href="https://github.com/zeileis"><span class="citation" data-cites="zeileis">@zeileis</span></a> with contributions from <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
-<li><code>type_qq()</code> (shortcut: “qq”) type for quantile-quantile plots. (<a href="https://github.com/grantmcdermott/tinyplot/issues/251">#251</a> <a href="https://github.com/vincentarelbundock"><span class="citation" data-cites="vincentarelbundock">@vincentarelbundock</span></a>)</li>
+<li><code>type_spineplot()</code> (shortcut: <code>"spineplot"</code>) spine plots and spinograms. These are modified versions of a histogram or mosaic plot, and are particularly useful for visualizing factor variables. (<a href="https://github.com/grantmcdermott/tinyplot/issues/233">#233</a> <a href="https://github.com/zeileis"><span class="citation" data-cites="zeileis">@zeileis</span></a> with contributions from <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
+<li><code>type_qq()</code> (shortcut: “qq”) for quantile-quantile plots. (<a href="https://github.com/grantmcdermott/tinyplot/issues/251">#251</a> <a href="https://github.com/vincentarelbundock"><span class="citation" data-cites="vincentarelbundock">@vincentarelbundock</span></a>)</li>
+<li><code>type_ridge()</code> (shortcut: <code>"ridge"</code>) for ridge plots aka Joy plots. (<a href="https://github.com/grantmcdermott/tinyplot/issues/252">#252</a> <a href="https://github.com/vincentarelbundock"><span class="citation" data-cites="vincentarelbundock">@vincentarelbundock</span></a>, <a href="https://github.com/zeileis"><span class="citation" data-cites="zeileis">@zeileis</span></a>, and <a href="https://github.com/grantmcdermott"><span class="citation" data-cites="grantmcdermott">@grantmcdermott</span></a>)</li>
 </ul></li>
 <li>Models:
 <ul>
@@ -849,8 +854,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -961,7 +964,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>license – tinyplot</title>
+<title>type_ridge – tinyplot</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-41ce87c438ccaeb35f64ae41c48547a8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-41ce87c438ccaeb35f64ae41c48547a8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">tinyplot</span>
     </a>
   </div>
@@ -103,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./LICENSE.html">License</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Reference</li><li class="breadcrumb-item">Plot types</li><li class="breadcrumb-item"><a href="../man/type_boxplot.html">Visualizations</a></li><li class="breadcrumb-item"><a href="../man/type_ridge.html">type_ridge</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -117,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -132,19 +166,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vignettes/introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../vignettes/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vignettes/types.html" class="sidebar-item-text sidebar-link">
+  <a href="../vignettes/types.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plot types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vignettes/gallery.html" class="sidebar-item-text sidebar-link">
+  <a href="../vignettes/gallery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gallery</span></a>
   </div>
 </li>
@@ -152,13 +186,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Reference</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -170,19 +204,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/tinyplot.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/tinyplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">tinyplot</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/tinyplot_add.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/tinyplot_add.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">tinyplot_add</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/draw_legend.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/draw_legend.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">draw_legend</span></a>
   </div>
 </li>
@@ -190,13 +224,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Plot types</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -208,61 +242,61 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_ribbon.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_ribbon.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_area</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_errorbar.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_errorbar.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_errorbar</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_lines.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_lines.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_errorbar.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_errorbar.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_pointrange</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_points.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_points.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_points</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_polygon.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_polygon.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_polygon</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_polypath.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_polypath.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_polypath</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_rect.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_rect.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_rect</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_ribbon.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_ribbon.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_ribbon</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_segments.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_segments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_segments</span></a>
   </div>
 </li>
@@ -270,46 +304,46 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Visualizations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_boxplot.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_boxplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_boxplot</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_histogram.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_histogram.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_histogram</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_jitter.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_jitter.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_jitter</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_qq.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_qq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_qq</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_ridge.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_ridge.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">type_ridge</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_spineplot.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_spineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_spineplot</span></a>
   </div>
 </li>
@@ -326,25 +360,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_glm.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_glm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_glm</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_loess.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_loess.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_loess</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_lm.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_lm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_lm</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_spline.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_spline.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_spline</span></a>
   </div>
 </li>
@@ -361,25 +395,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_abline.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_abline.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_abline</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_function.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_function.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_hline.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_hline.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_hline</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/type_vline.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/type_vline.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_vline</span></a>
   </div>
 </li>
@@ -398,13 +432,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/tpar.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/tpar.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">tpar</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./man/get_saved_par.html" class="sidebar-item-text sidebar-link">
+  <a href="../man/get_saved_par.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">get_saved_par</span></a>
   </div>
 </li>
@@ -414,19 +448,19 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./NEWS.html" class="sidebar-item-text sidebar-link">
+  <a href="../NEWS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">News</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LICENSE.html" class="sidebar-item-text sidebar-link active">
+  <a href="../LICENSE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">License</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CITATION.html" class="sidebar-item-text sidebar-link">
+  <a href="../CITATION.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Citation</span></a>
   </div>
 </li>
@@ -440,95 +474,226 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#apache-license" id="toc-apache-license" class="nav-link active" data-scroll-target="#apache-license">Apache License</a>
+  <li><a href="#ridge-plot-type" id="toc-ridge-plot-type" class="nav-link active" data-scroll-target="#ridge-plot-type">Ridge plot type</a>
   <ul class="collapse">
-  <li><a href="#terms-and-conditions-for-use-reproduction-and-distribution" id="toc-terms-and-conditions-for-use-reproduction-and-distribution" class="nav-link" data-scroll-target="#terms-and-conditions-for-use-reproduction-and-distribution">Terms and Conditions for use, reproduction, and distribution</a></li>
-  <li><a href="#appendix-how-to-apply-the-apache-license-to-your-work" id="toc-appendix-how-to-apply-the-apache-license-to-your-work" class="nav-link" data-scroll-target="#appendix-how-to-apply-the-apache-license-to-your-work">APPENDIX: How to apply the Apache License to your work</a></li>
+  <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
+  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
+  <li><a href="#arguments" id="toc-arguments" class="nav-link" data-scroll-target="#arguments">Arguments</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Reference</li><li class="breadcrumb-item">Plot types</li><li class="breadcrumb-item"><a href="../man/type_boxplot.html">Visualizations</a></li><li class="breadcrumb-item"><a href="../man/type_ridge.html">type_ridge</a></li></ol></nav></header>
 
 
 
 
-<section id="apache-license" class="level1">
-<h1>Apache License</h1>
-<p><em>Version 2.0, January 2004</em> <em>&lt;<a href="http://www.apache.org/licenses/" class="uri">http://www.apache.org/licenses/</a>&gt;</em></p>
-<section id="terms-and-conditions-for-use-reproduction-and-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="terms-and-conditions-for-use-reproduction-and-distribution">Terms and Conditions for use, reproduction, and distribution</h3>
-<section id="definitions" class="level4">
-<h4 class="anchored" data-anchor-id="definitions">1. Definitions</h4>
-<p>“License” shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.</p>
-<p>“Licensor” shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.</p>
-<p>“Legal Entity” shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, “control” means <strong>(i)</strong> the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or <strong>(ii)</strong> ownership of fifty percent (50%) or more of the outstanding shares, or <strong>(iii)</strong> beneficial ownership of such entity.</p>
-<p>“You” (or “Your”) shall mean an individual or Legal Entity exercising permissions granted by this License.</p>
-<p>“Source” form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.</p>
-<p>“Object” form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.</p>
-<p>“Work” shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).</p>
-<p>“Derivative Works” shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.</p>
-<p>“Contribution” shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, “submitted” means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as “Not a Contribution.”</p>
-<p>“Contributor” shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.</p>
+<section id="ridge-plot-type" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="ridge-plot-type">Ridge plot type</h2>
+<section id="description" class="level3">
+<h3 class="anchored" data-anchor-id="description">Description</h3>
+<p>Type function for producing ridge plots (also known as joy plots), which display density distributions for multiple groups with vertical offsets. This function uses <code>tinyplot</code> scaffolding, which enables added functionality such as grouping and faceting.</p>
+<p>The line color is controlled by the <code>col</code> argument in the <code>tinyplot()</code> call. The fill color is controlled by the <code>bg</code> argument in the <code>tinyplot()</code> call.</p>
 </section>
-<section id="grant-of-copyright-license" class="level4">
-<h4 class="anchored" data-anchor-id="grant-of-copyright-license">2. Grant of Copyright License</h4>
-<p>Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.</p>
+<section id="usage" class="level3">
+<h3 class="anchored" data-anchor-id="usage">Usage</h3>
+<pre><code class="language-R">type_ridge(
+  scale = 1.5,
+  gradient = FALSE,
+  breaks = NULL,
+  probs = NULL,
+  bw = "nrd0",
+  kernel = "gaussian",
+  ...,
+  raster = FALSE,
+  col = NULL,
+  alpha = NULL
+)
+</code></pre>
 </section>
-<section id="grant-of-patent-license" class="level4">
-<h4 class="anchored" data-anchor-id="grant-of-patent-license">3. Grant of Patent License</h4>
-<p>Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.</p>
+<section id="arguments" class="level3">
+<h3 class="anchored" data-anchor-id="arguments">Arguments</h3>
+<table>
+<tbody><tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="scale">scale</code>
+</td>
+<td>
+Numeric. Controls the scaling factor of each plot. Values greater than 1 means that plots overlap.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="gradient">gradient</code>
+</td>
+<td>
+Logical or character. Should a color gradient be used to shade the area under the density? If a character specification is used, then it can either be of length 1 and specify the palette to be used with <code>gradient = TRUE</code> corresponding to <code>gradient = “viridis”</code>. If a character vector of length greater than 1 is used, then it should specifify the colors in the palette, e.g., <code>gradient = hcl.colors(512)</code>.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="breaks">breaks</code>
+</td>
+<td>
+Numeric. If a color gradient is used for shading, the breaks between the colors can be modified. The default is to use equidistant breaks spanning the range of the <code>x</code> variable.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="probs">probs</code>
+</td>
+<td>
+Numeric. Instead of specifying the same <code>breaks</code> on the x-axis for all groups, it is possible to specify group-specific quantiles at the specified <code>probs</code>. The quantiles are computed based on the density (rather than the raw original variable). Only one of <code>breaks</code> or <code>probs</code> must be specified.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="bw">bw</code>, <code id="kernel">kernel</code>, <code id="...">…</code>
+</td>
+<td>
+Arguments passed to <code>density</code>.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="raster">raster</code>
+</td>
+<td>
+Logical. Should the ridges and color gradient, if relevant, be drawn via a coercion to <code>rasterImage</code>? Note that this will result in potential smoothness artifacts at high resolutions. Defaults to <code>FALSE</code>, in which case the ridges and color gradient will be passed in vectorised fashion to <code>polygon</code>.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="col">col</code>
+</td>
+<td>
+Character string denoting the outline (border) color for all of the ridge densities. Note that a singular value is expected; if multiple colors are provided then only the first will be used. This argument is mostly useful for the aesthetic effect of drawing a common outline color in combination with gradient fills. See Examples.
+</td>
+</tr>
+<tr>
+<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
+<code id="alpha">alpha</code>
+</td>
+<td>
+Numeric in the range <code style="white-space: pre;">[0,1]</code> for adjusting the alpha transparency of the density fills. In most cases, will default to a value of 1, i.e.&nbsp;fully opaque. But for some <code>by</code> grouped plots (excepting the special cases where <code>by==y</code> or <code>by==x</code>), will default to 0.6.
+</td>
+</tr>
+</tbody></table>
 </section>
-<section id="redistribution" class="level4">
-<h4 class="anchored" data-anchor-id="redistribution">4. Redistribution</h4>
-<p>You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:</p>
-<ul>
-<li><strong>(a)</strong> You must give any other recipients of the Work or Derivative Works a copy of this License; and</li>
-<li><strong>(b)</strong> You must cause any modified files to carry prominent notices stating that You changed the files; and</li>
-<li><strong>(c)</strong> You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and</li>
-<li><strong>(d)</strong> If the Work includes a “NOTICE” text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.</li>
-</ul>
-<p>You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.</p>
-</section>
-<section id="submission-of-contributions" class="level4">
-<h4 class="anchored" data-anchor-id="submission-of-contributions">5. Submission of Contributions</h4>
-<p>Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.</p>
-</section>
-<section id="trademarks" class="level4">
-<h4 class="anchored" data-anchor-id="trademarks">6. Trademarks</h4>
-<p>This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.</p>
-</section>
-<section id="disclaimer-of-warranty" class="level4">
-<h4 class="anchored" data-anchor-id="disclaimer-of-warranty">7. Disclaimer of Warranty</h4>
-<p>Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.</p>
-</section>
-<section id="limitation-of-liability" class="level4">
-<h4 class="anchored" data-anchor-id="limitation-of-liability">8. Limitation of Liability</h4>
-<p>In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.</p>
-</section>
-<section id="accepting-warranty-or-additional-liability" class="level4">
-<h4 class="anchored" data-anchor-id="accepting-warranty-or-additional-liability">9. Accepting Warranty or Additional Liability</h4>
-<p>While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.</p>
-<p><em>END OF TERMS AND CONDITIONS</em></p>
-</section>
-</section>
-<section id="appendix-how-to-apply-the-apache-license-to-your-work" class="level3">
-<h3 class="anchored" data-anchor-id="appendix-how-to-apply-the-apache-license-to-your-work">APPENDIX: How to apply the Apache License to your work</h3>
-<p>To apply the Apache License to your work, attach the following boilerplate notice, with the fields enclosed by brackets <code>[]</code> replaced with your own identifying information. (Don’t include the brackets!) The text should be enclosed in the appropriate comment syntax for the file format. We also recommend that a file or class name and description of purpose be included on the same “printed page” as the copyright notice for easier identification within third-party archives.</p>
-<pre><code>Copyright [yyyy] [name of copyright owner]
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</code></pre>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tinyplot"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="do">## default ridge plot</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tinyplot</span>(Species <span class="sc">~</span> Sepal.Width, <span class="at">data =</span> iris, <span class="at">type =</span> <span class="st">"ridge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="type_ridge_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## use the same bandwidth for all densities</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tinyplot</span>(Species <span class="sc">~</span> Sepal.Width, <span class="at">data =</span> iris,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">type_ridge</span>(<span class="at">bw =</span> <span class="fu">bw.nrd0</span>(iris<span class="sc">$</span>Sepal.Width)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="type_ridge_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## customized ridge plot without overlap of densities</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tinyplot</span>(Species <span class="sc">~</span> Sepal.Width, <span class="at">data =</span> iris,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">type_ridge</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"light blue"</span>, <span class="at">col =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="type_ridge_files/figure-html/unnamed-chunk-1-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## by grouping is also supported. two special cases of interest:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) by == y (color by y groups)</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tinyplot</span>(Species <span class="sc">~</span> Sepal.Width <span class="sc">|</span> Species, <span class="at">data =</span> iris, <span class="at">type =</span> <span class="st">"ridge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="type_ridge_files/figure-html/unnamed-chunk-1-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) by == x (gradient coloring along x)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tinyplot</span>(Species <span class="sc">~</span> Sepal.Width <span class="sc">|</span> Sepal.Width, <span class="at">data =</span> iris, <span class="at">type =</span> <span class="st">"ridge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="type_ridge_files/figure-html/unnamed-chunk-1-5.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># aside: pass explicit `type_ridge(col = &lt;col&gt;)` arg to set a common border</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># color</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tinyplot</span>(Species <span class="sc">~</span> Sepal.Width <span class="sc">|</span> Sepal.Width, <span class="at">data =</span> iris,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">type_ridge</span>(<span class="at">col =</span> <span class="st">"white"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="type_ridge_files/figure-html/unnamed-chunk-1-6.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## gradient coloring along the x-axis can also be invoked manually without</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="do">## a legend (the following lines are all equivalent)</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tinyplot</span>(Species <span class="sc">~</span> Sepal.Width, <span class="at">data =</span> iris, <span class="at">type =</span> <span class="fu">type_ridge</span>(<span class="at">gradient =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="type_ridge_files/figure-html/unnamed-chunk-1-7.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tinyplot(Species ~ Sepal.Width, data = iris, type = type_ridge(gradient = "viridis"))</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># tinyplot(Species ~ Sepal.Width, data = iris, type = type_ridge(gradient = hcl.colors(512)))</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="do">## highlighting only the center 50% of the density (between 25% and 75% quantile)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tinyplot</span>(Species <span class="sc">~</span> Sepal.Width, <span class="at">data =</span> iris, <span class="at">col =</span> <span class="st">"white"</span>, <span class="at">type =</span> <span class="fu">type_ridge</span>(</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">gradient =</span> <span class="fu">hcl.colors</span>(<span class="dv">3</span>, <span class="st">"Dark Mint"</span>)[<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>)], <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.75</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="type_ridge_files/figure-html/unnamed-chunk-1-8.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## highlighting the probability distribution by the color gradient</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tinyplot</span>(Species <span class="sc">~</span> Sepal.Width, <span class="at">data =</span> iris, <span class="at">type =</span> <span class="fu">type_ridge</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">gradient =</span> <span class="fu">hcl.colors</span>(<span class="dv">250</span>, <span class="st">"Dark Mint"</span>)[<span class="fu">c</span>(<span class="dv">250</span><span class="sc">:</span><span class="dv">1</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">250</span>)], <span class="at">probs =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">500</span><span class="sc">/</span><span class="dv">500</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="type_ridge_files/figure-html/unnamed-chunk-1-9.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## with faceting and color gradient</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>airq <span class="ot">=</span> <span class="fu">transform</span>(airquality, <span class="at">Late =</span> <span class="fu">ifelse</span>(Day <span class="sc">&gt;</span> <span class="dv">15</span>, <span class="st">"Late"</span>, <span class="st">"Early"</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tinyplot</span>(Month <span class="sc">~</span> Ozone, <span class="at">facet =</span> <span class="sc">~</span> Late, <span class="at">data =</span> airq,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">type_ridge</span>(<span class="at">gradient =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">axes =</span> <span class="st">"t"</span>, <span class="at">col =</span> <span class="st">"white"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="type_ridge_files/figure-html/unnamed-chunk-1-10.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>
