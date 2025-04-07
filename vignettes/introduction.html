@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,10 +69,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bd89562929948232a0cfc2a2280e30cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-831a6e13d34e89ab8943621a9b1bffba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -294,6 +294,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../man/type_barplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">type_barplot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../man/type_boxplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_boxplot</span></a>
   </div>
@@ -338,6 +344,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../man/type_spineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">type_spineplot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../man/type_violin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">type_violin</span></a>
   </div>
 </li>
       </ul>
@@ -777,7 +789,7 @@ Tip: <code>plt()</code> shorthand alias
 </section>
 <section id="more-plot-types" class="level2">
 <h2 class="anchored" data-anchor-id="more-plot-types">More plot types</h2>
-<p>We have already seen several plot types above such as <code>"p"</code> (points), <code>"l"</code> (lines), and <code>"density"</code>. In general, <strong>tinyplot</strong> supports all of the primitive plot types/elements available in base R, as well as a number of additional plot types that can be a bit tedious to code up manually. The full list of supported plot types can be viewed in <a href="https://github.com/grantmcdermott/tinyplot/issues/97">this pinned GitHub issue</a>, or by checking the <a href="https://grantmcdermott.com/tinyplot/man/tinyplot.html#arguments"><code>?tinyplot</code></a> documentation.</p>
+<p>We have already seen several plot types above such as <code>"p"</code> (points), <code>"l"</code> (lines), and <code>"density"</code>. In general, <strong>tinyplot</strong> supports all of the primitive plot types/elements available in base R, as well as a number of additional plot types that can be a bit tedious to code up manually. You can see the full list of supported plot types by checking the <a href="https://grantmcdermott.com/tinyplot/man/tinyplot.html#arguments"><code>?tinyplot</code></a> documentation, or by taking a look at the dedicated <a href="../vignettes/types.html">Plot Types</a> vignette on this website.</p>
 <p>For example, <strong>tinyplot</strong> supports interval plots via the <code>"pointrange"</code>, <code>"errorbar"</code>, <code>"ribbon"</code>, and related type arguments. A canonical use-case is coefficient plots:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">=</span> <span class="fu">lm</span>(Temp <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> Month <span class="sc">/</span> Day, <span class="at">data =</span> aq)</span>
@@ -842,7 +854,7 @@ Tip: <code>plt()</code> shorthand alias
 </div>
 </div>
 </div>
-<p>We will see examples of more plot types below, including other model prediction types. Please also take a look at <a href="../vignettes/types.html">the dedicated Plot Types vignette</a> for explicit details about all of the different plot types that <strong>tinyplot</strong> supports, as well as how to create your own custom types.</p>
+<p>We will see examples of more plot types below, including other model prediction types. Again, please also take a look at the dedicated <a href="../vignettes/types.html">Plot Types</a> vignette for explicit details about all of the different plot types that <strong>tinyplot</strong> supports, as well as how to create your own custom types. You can also request support for additional plot types, or see what’s on our roadmap, by heading over to this <a href="https://github.com/grantmcdermott/tinyplot/issues/97">pinned issue</a> on our GitHub repo.</p>
 </section>
 <section id="facets" class="level2">
 <h2 class="anchored" data-anchor-id="facets">Facets</h2>
@@ -1002,7 +1014,7 @@ Tip: <code>plt_add()</code> shorthand alias
 </section>
 <section id="themes" class="level2">
 <h2 class="anchored" data-anchor-id="themes">Themes</h2>
-<p>In the examples thus far, we have adjusted our plot aesthetics manually by tweaking individual arguments and settings. A more convenient way to change the look of your plots is by calling the <code>tinytheme()</code> function. This will modify several graphical settings simultaneously to match a variety of pre-defined styles. In addition to convenience, themes have the added benefit of enabling dynamic adjustment of the plot regions, so that excess whitespace is reduced and long text strings (e.g., horizontal axis labels) are accounted for. Please see the <code>?tinytheme</code> help page, as well as the dedicated <a href="../vignettes/themes.html">Themes vignette</a> for a detailed overview of <strong>tinyplot</strong>’s theming functionality. Here we provide a small taster by applying the “dark” theme to one of our earlier plots.</p>
+<p>In the examples thus far, we have adjusted our plot aesthetics manually by tweaking individual arguments and settings. A more convenient way to change the look of your plots is by calling the <code>tinytheme()</code> function. This will modify several graphical settings simultaneously to match a variety of pre-defined styles. In addition to convenience, themes have the added benefit of enabling dynamic adjustment of the plot regions, so that excess whitespace is reduced and long text strings (e.g., horizontal axis labels) are accounted for. Please see the <code>?tinytheme</code> help page, as well as the dedicated <a href="../vignettes/themes.html">Themes</a> vignette for a detailed overview of <strong>tinyplot</strong>’s theming functionality. Here we provide a small taster by applying the “dark” theme to one of our earlier plots.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># apply theme</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tinytheme</span>(<span class="st">"dark"</span>)</span>
