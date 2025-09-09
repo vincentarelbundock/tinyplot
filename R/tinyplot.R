@@ -697,6 +697,14 @@ tinyplot.default = function(
   facet_dep = deparse1(substitute(facet))
 
 
+  ############################
+  # initialize settings object
+  ############################
+
+  settings = new("tinyplot_settings",
+    type = type, x = x, y = y, dots = list(...))
+
+
   ####################
   # sanitize arguments
   ####################
@@ -713,11 +721,8 @@ tinyplot.default = function(
   draw = substitute(draw)
 
   # type
-  type = sanitize_type(type, x, y, dots)
-  if ("dots" %in% names(type)) dots = type$dots
-  type_data = type$data
-  type_draw = type$draw
-  type = type$name
+  settings = sanitize_type(settings)
+  settings_to_environment(settings, environment())
   
   # area flag (mostly for legend)
   was_area_type = identical(type, "area")
